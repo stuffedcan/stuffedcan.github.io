@@ -1,33 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Stuffed Can</title>
-    <link rel="stylesheet" href="stylesheets/css.css">
-    <link rel="stylesheet" href="stylesheets/main.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Stuffed Can</h1>
-        <p>...</p>
-        <p class="view"><a href="http://stuffedcan.com">View</a></p>
-      </header>
-      <section>
-        <h3></a>Under construction...</h3>
+---
+layout: default
+title: Home
+---
 
-        <p>...</p>
+<!-- Show last 5 posts here -->
+{% for post in paginator.posts %}
+	<article>
 
-      </section>
-      <footer>
-        <p><small>SC &mdash; <a href="http://stuffedcan.com">StuffedCan</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/mobile.js"></script>
-  </body>
-</html>
+        <header>
+            <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
+            <span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span><br/>
+            <span class="author"><i class="icon-user"></i> {% if post.author %}{{post.author}}{% else %}{{site.author}}{% endif%}</span>
+        </header>
+	
+		<div class="entry">{{ post.excerpt }}</div>
+
+	</article>
+{% endfor %}
+
+
+<div id="paginator">
+    {% if paginator.next_page %}
+            <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+            &laquo; Older Posts</a>
+    {% endif %}
+
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+                <span class="more">
+                <a href="{{site.baseurl}}/">
+                Newer Posts &raquo; </a>
+                </span>
+        {% else %}
+                <span class="more">
+                <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
+                Newer Posts &raquo; </a>
+                </span>
+        {% endif %}
+    {% endif %}
+</div>
