@@ -49,14 +49,6 @@
        url('/public/opensans.woff') format('woff');
 }
 
-@font-face {
-  font-family: Sfont;
-  font-style: normal;
-  font-weight: 400;
-  src: url('/public/doand.woff2') format('woff2'),
-       url('/public/doand.woff') format('woff');
-}
-
 html,
 body {
   margin: 0;
@@ -115,11 +107,11 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 h3 {
   margin-top: 1.5rem;
@@ -426,7 +418,7 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Nfont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
