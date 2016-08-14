@@ -93,7 +93,8 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  position: relative;
+  top: 1px;
 }
 
 /* Headings */
@@ -326,6 +327,11 @@ tbody tr:nth-child(odd) th {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
+  background-position:left 3.5rem bottom;
+  background-color:#F5F5F5;
+  background-image: url('/public/logo.png');
+  background-size:contain;
+  background-repeat:no-repeat;
 }
 .masthead-title a {
   color: #505050;
