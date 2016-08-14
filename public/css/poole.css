@@ -41,15 +41,32 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Nfont;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/public/opensans.woff2') format('woff2'),
+       url('/public/opensans.woff') format('woff');
+}
+
+@font-face {
+  font-family: Sfont;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/public/doand.woff2') format('woff2'),
+       url('/public/doand.woff') format('woff');
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  text-rendering: geometricPrecision;
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: Nfont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
