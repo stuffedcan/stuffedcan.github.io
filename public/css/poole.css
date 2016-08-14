@@ -334,18 +334,16 @@ tbody tr:nth-child(odd) th {
 }
 .masthead-title a {
   color: #505050;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+  position: relative;
+  right: 0;
 }
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+  position: relative;
+  right: 0;
 }
 
 
