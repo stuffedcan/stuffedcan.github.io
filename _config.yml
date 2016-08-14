@@ -1,7 +1,7 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           none
+permalink:           pretty
 
 # Setup
 title:               Stuffed Can
@@ -9,7 +9,7 @@ tagline:             'How much can you stuff?'
 description:         'Blog about Stuff'
 url:                 http://stuffedcan.com
 baseurl:             'http://stuffedcan.com'
-paginate:            5
+paginate:            2
 
 # Custom vars
 version:             1.0.3
