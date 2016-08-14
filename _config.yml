@@ -1,7 +1,7 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink:           none
 
 # Setup
 title:               Stuffed Can
@@ -10,12 +10,6 @@ description:         'Blog about Stuff'
 url:                 http://stuffedcan.com
 baseurl:             ''
 paginate:            5
-
-# About/contact
-#author:
-#  name:              Mark Otto
-#  url:               https://twitter.com/mdo
-#  email:             markdotto@gmail.com
 
 # Custom vars
 version:             1.0.3
