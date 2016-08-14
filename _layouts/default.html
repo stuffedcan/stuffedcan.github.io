@@ -3,13 +3,26 @@
 
   {% include head.html %}
 
-<body>
-  {% include header.html %}
+  <body>
+      <header class="masthead" style="padding-top:0">
+        <h3 class="masthead-title">
+          <span style="display:inline-block;font-family: Sfont, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 2.5rem;white-space: nowrap;"><a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>&nbsp;&nbsp;</span>
+            {% for page in site.pages_list %}
+              <span style="display:inline-block"><small><a href="{{ page[1] }}">{{ page[0] }}</a></small>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            {% endfor %}
+        </h3>
+      </header>
+    <div class="container content">
+      <main>
+        {{ content }}
+      </main>
 
-  <section class="main-content">
-    {{ content }}
-      {% include footer.html %}
-  </section>
+      <footer class="footer" style="background-color:#F0F0F0">
+        <small>
+          &nbsp;&copy; <a href="https://www.google.com/recaptcha/mailhide/d?k=01RKQXgMiCn8dgvgHbVnzIPQ==&c=yAWm6xoNth1P87zR-8D3AIs1VdbTphSgX6CyOpHw4odFLGn6SO_x_4VJTao_19E0" onclick="window.open('https://www.google.com/recaptcha/mailhide/d?k=01RKQXgMiCn8dgvgHbVnzIPQ==&c=yAWm6xoNth1P87zR-8D3AIs1VdbTphSgX6CyOpHw4odFLGn6SO_x_4VJTao_19E0', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Nídia's e-mail address">Nídia Trovão</a> <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> &bull; <a href="http://nidiatrovao.com/archive/">Archive</a> &bull; <a href="http://nidiatrovao.com/atom.xml">RSS</a> &bull; <a href="https://twitter.com/nidiatrovao" target="_blank">Follow me on Twitter</a>! &bull; <a href="https://www.linkedin.com/in/nidiatrovao" target="_blank">See me on Linkedin</a>!
+        </small>
+      </footer>
+    </div>
 
-</body>
+  </body>
 </html>

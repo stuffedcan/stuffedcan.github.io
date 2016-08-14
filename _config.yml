@@ -1,15 +1,24 @@
-# Site settings
-title:        "Stuffed Can"
-description:  "A blog about stuff... in a can."
-baseurl:      ""
-url:          "http://stuffedcan.com"
-permalink:    /:title
-github:       "yourusername"
-twitter:      "yourusername"
-email:        "mail@example.com"
-disqus-id:    "example" #leave blank if you dont want comments.
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+# relative_permalinks: true
 
-# Build settings
-markdown:     kramdown
+# Setup
+title:               Nídia Trovão
+tagline:             Website
+url:                 http://nidiatrovao.com
+paginate:            3
+baseurl:             "http://nidiatrovao.com"
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
 sass:
-    style: :compressed
+  sass_dir:          _sass
+  style:            :compressed
+  
+pages_list:       
+  About: '/about'
+  Research: '/research'
+  Publications: '/publications'
