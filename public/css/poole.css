@@ -327,7 +327,7 @@ tbody tr:nth-child(odd) th {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
-  background-position:left 0rem bottom;
+  background-position:left bottom;
   background-image: url('/public/logo.png');
   background-size:contain;
   background-repeat:no-repeat;
