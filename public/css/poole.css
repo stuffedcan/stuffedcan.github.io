@@ -45,8 +45,8 @@
   font-family: Nfont;
   font-style: normal;
   font-weight: 300;
-  src: url('/public/opens.woff2') format('woff2'),
-       url('/public/opens.woff') format('woff');
+  src: url('/public/rbt3.woff2') format('woff2'),
+       url('/public/rbt3.woff') format('woff');
 }
 
 html,
