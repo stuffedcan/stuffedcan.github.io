@@ -1,2 +1,1 @@
-# stuffedcan.github.io
-(...)
+# Stuffed Can
