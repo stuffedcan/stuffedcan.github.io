@@ -124,10 +124,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 18em) {
+@media (max-width: 15em) {
   .masthead-title {
     text-align: center;
-    background-position: right 0.5em;
+    background-position: right 0.5em center;
   }
   .masthead-title small {
     display: none;
