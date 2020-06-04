@@ -1,0 +1,37 @@
+---
+layout: default
+title: Home
+sitemap: false
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+    <div class="post-categories">
+      {% for category in post.categories %}
+      {{category}}
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}{% include readtime.html %}
+    </div>
+      {% assign ncut = 500 %}
+      {% assign words = post.content | strip_newlines | markdownify | strip_html | truncate: ncut, "" | number_of_words | decrement %}
+      <a class="noa" href='{{ post.url }}'>{{ post.content | strip_newlines | markdownify | strip_html | truncatewords: words, " " }}</a><a class="dothvr" href='{{ post.url }}'><span class="dot"></span><span class="dot dotc"></span><span class="dot"></span></a>
+  </article>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older left" href="{{ paginator.next_page_path | prepend: site.baseurl }}"></a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer right" href="{{ paginator.previous_page_path | prepend: site.baseurl }}"></a>
+  {% else %}
+    <span class="pagination-item newer"></span>
+  {% endif %}
+</div>

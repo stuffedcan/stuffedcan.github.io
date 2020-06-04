@@ -1,0 +1,31 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <link rel="self" href="{{ site.url }}/feed" />
+  <link href="{{ site.url }}/"/>
+  <updated>{% for post in site.posts limit:1 %}{{ post.date | date_to_xmlschema }}{% endfor %}</updated>
+  <id>{{ site.url }}/</id>
+  <icon>{{ site.url }}/public/favicon.ico</icon>
+  <logo>{{ site.url }}/public/touch-icon-iphone.png</logo>
+
+  {% for post in site.posts limit:10 %}
+    {% unless post.published == false %}
+      <entry>
+        <title>{{ post.title | xml_escape }}</title>
+        <category term="{% for category in post.categories %}{{category}}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}"/>
+        <summary>{{ post.description | xml_escape }}</summary>
+        <link href="{{ site.url }}{{ post.url }}"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>{{ site.url }}{{ post.id }}</id>
+        <content type="html">{{ post.content | xml_escape }}</content>
+      </entry>
+    {% endunless %}
+  {% endfor %}
+
+</feed>
