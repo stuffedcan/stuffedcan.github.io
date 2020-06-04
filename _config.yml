@@ -1,10 +1,10 @@
 permalink:           /:categories/:title/
 
-title:               Bonina
-url:                 https://bonina.eu
+title:               StuffedCan
+url:                 https://stuffedcan.github.io
 paginate:            4
 
-description: 'Bonina is where you find tips and tutorials about technology'
+description: 'StuffedCan is where you find tips and tutorials about technology'
 
 timezone: America/New_York
 
