@@ -40,7 +40,7 @@ body {
 }
 
 a:not(.noa) {
-  color: #cecece;
+  color: #222222;
   text-decoration: none;
   transition: color 0s;
 
@@ -49,7 +49,7 @@ a:not(.noa) {
   &:focus {
     //position: relative;
     //top: 1px;
-    color: #c74438;
+    color: #AC4142;
     //transition: color 0.2s;
     transition:all .2s ease-in-out;
   }
