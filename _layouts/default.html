@@ -4,7 +4,7 @@
 <body>
   <input type="checkbox" id="nav-trigger" class="nav-trigger" />
   <label for="nav-trigger">
-    <img src="/public/logo.webp" alt="Menu" class="b0">
+    <img src="/public/logo.webp" alt="Menu" class="b0" id="logosc">
   </label>
   <ul class="navigation">
     <li class="nav-item-fill" style="height:6rem;"></li>
@@ -24,5 +24,16 @@
       </footer>
     </div>
   </span>
+  <script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.getElementById("logosc").style.fontSize = "30px";
+    } else {
+      document.getElementById("logosc").style.fontSize = "90px";
+    }
+  }
+  </script>
 </body>
 </html>
