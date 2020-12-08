@@ -6,6 +6,7 @@
   width: auto;
   height: 2.5rem;
   transition: transform .2s;
+  image-rendering: pixelated;
 }
 
 .b0:hover {
