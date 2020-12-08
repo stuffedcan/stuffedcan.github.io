@@ -7,6 +7,8 @@
   height: 2.5rem;
   transition: transform .2s;
   //image-rendering: high-quality;
+  image-rendering:-webkit-optimize-contrast;
+  image-rendering:-moz-crisp-edges;
   image-rendering: crisp-edges;
 }
 
