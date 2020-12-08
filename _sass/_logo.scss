@@ -6,7 +6,8 @@
   width: auto;
   height: 2.5rem;
   transition: transform .2s;
-  image-rendering: high-quality;
+  //image-rendering: high-quality;
+  image-rendering: crisp-edges;
 }
 
 .b0:hover {
